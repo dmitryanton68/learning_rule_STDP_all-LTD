@@ -19,8 +19,10 @@ The STDP mechanism by itself provides the sensitivity of postsynaptic neurons to
  Such insensitivity of neurons to _"alien classes"_ features is provided by the __all-LTD__ rule (all-time synaptic depression):   
  - if pre- and postsynaptic spikes both fall within the interval |Δt| (within the same period of 50 msec), the connection strength between the neurons decreases.    
  
- This mechanism of synaptic connection change is illustrated in Fig. b.
-![STDP+all-LTD](STDP+all_LTD.svg)
+ This mechanism of synaptic connection change is illustrated in Fig. b.   
+ 
+![STDP+all-LTD](STDP+all_LTD.svg)   
+
 ***
 
 The network on which experiments on the application of the complex rule __'STDR+all-LTD'__ was consists of two layers: the first input layer contains Poisson neurons, the second layer consists of an equal number of excitatory and inhibitory neurons. Connections between excitatory and inhibitory neurons allow the most active excitatory neurons to reduce the activity of their neighbors, thereby exerting lateral inhibition. Lateral inhibition allows each of the excitatory neurons to highlight its own unique feature and to mute common features in the input data.
