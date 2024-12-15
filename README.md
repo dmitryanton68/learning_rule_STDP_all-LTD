@@ -1,6 +1,6 @@
 # __Spiking neural networks training with combined Hebbian rules__
 ***
-The code illustrates the result reported at the ITNT-2024 conference and published in [IEEE Xplore](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10582358&isnumber=10582284)
+The code illustrates the result reported at the [ITNT-2024](https://itnt-conf.org/index.php/en) conference and published in [IEEE Xplore](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10582358&isnumber=10582284)
 
 ### ARTICLE:   
 D. Antonov, B. Batuev and S. Sukhov, "Spiking Neural Networks Training with Combined Hebbian Rules," 2024 X International Conference on Information Technology and Nanotechnology (ITNT), Samara, Russian Federation, 2024, pp. 1-5.    
