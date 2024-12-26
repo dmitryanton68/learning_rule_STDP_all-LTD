@@ -1,6 +1,6 @@
 # __Spiking neural networks training with combined Hebbian rules__
 ***
-The code illustrates the result reported at the ITNT-2024 conference and published in IEEE https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10582358&isnumber=10582284
+The code illustrates the result reported at the [ITNT-2024](https://itnt-conf.org/index.php/en) conference and published in [IEEE Xplore](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10582358&isnumber=10582284)
 
 ### ARTICLE:   
 D. Antonov, B. Batuev and S. Sukhov, "Spiking Neural Networks Training with Combined Hebbian Rules," 2024 X International Conference on Information Technology and Nanotechnology (ITNT), Samara, Russian Federation, 2024, pp. 1-5.    
@@ -19,8 +19,10 @@ The STDP mechanism by itself provides the sensitivity of postsynaptic neurons to
  Such insensitivity of neurons to _"alien classes"_ features is provided by the __all-LTD__ rule (all-time synaptic depression):   
  - if pre- and postsynaptic spikes both fall within the interval |Δt| (within the same period of 50 msec), the connection strength between the neurons decreases.    
  
- This mechanism of synaptic connection change is illustrated in Fig. b.
-![STDP+all-LTD](STDP+all_LTD.svg)
+ This mechanism of synaptic connection change is illustrated in Fig. b.   
+ 
+![STDP+all-LTD](STDP+all_LTD.svg)   
+
 ***
 
 The network on which experiments on the application of the complex rule __'STDR+all-LTD'__ was consists of two layers: the first input layer contains Poisson neurons, the second layer consists of an equal number of excitatory and inhibitory neurons. Connections between excitatory and inhibitory neurons allow the most active excitatory neurons to reduce the activity of their neighbors, thereby exerting lateral inhibition. Lateral inhibition allows each of the excitatory neurons to highlight its own unique feature and to mute common features in the input data.
@@ -29,7 +31,9 @@ The operation of the SNN (see Fig.) consists of performing the following steps w
 - From Poisson neurons, the signal travels through synapses of the _S1_ group to the excitatory neurons of the second layer. These _S1_ group’s synapses connect Poisson neurons with excitatory neurons according to the _one-to-all manner_.
 - The spikes, arriving at the excitatory neurons, lead to an increase in the neuronal membrane potential V. When membrane potential _V_ reachs the threshold level _V_thres_, exitatory neuron generates spikes. These spikes pass through the _S2_ group's synapses to the inhibitory neurons of the second layer. Each spike from an excitatory neuron will trigger a spike of the corresponding inhibitory neuron since the synapses of the _S2_ group connect them in a _one-to-one manner_. The weights of the _S2_ group’s synapses remain constant.
 - The signal from inhibitory neurons goes back to excitatory neurons according to the _one-to-all-except-initiating manner_ through the synapses of the _S3_ group. The weights of the _S3_ group also remain constant; such a connection provides lateral inhibition.
+  
 ![SNN architecture](SNN_architecture.jpg)
+
 When training a network, data is received sequentially one at a time. After the generation of spikes evoked by a single image for _350 msec_, there is a rest period of _150 msec_ in the absence of input signals. During the resting period, the potential of the excitatory neurons drops to a lower threshold, after which the loop is repeated in the subsequent image.
 ***
 The logic behind the operation of the canonical STDP mechanism is to causally strengthen the corresponding synaptic connection, which allows the neuron to identify repeating sequences in the input signal (to highlight the characteristic features of the signal).   
