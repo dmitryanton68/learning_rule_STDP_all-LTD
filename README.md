@@ -32,7 +32,7 @@ The operation of the SNN (see Fig.) consists of performing the following steps w
 - The spikes, arriving at the excitatory neurons, lead to an increase in the neuronal membrane potential V. When membrane potential _V_ reachs the threshold level _V_thres_, exitatory neuron generates spikes. These spikes pass through the _S2_ group's synapses to the inhibitory neurons of the second layer. Each spike from an excitatory neuron will trigger a spike of the corresponding inhibitory neuron since the synapses of the _S2_ group connect them in a _one-to-one manner_. The weights of the _S2_ group’s synapses remain constant.
 - The signal from inhibitory neurons goes back to excitatory neurons according to the _one-to-all-except-initiating manner_ through the synapses of the _S3_ group. The weights of the _S3_ group also remain constant; such a connection provides lateral inhibition.
   
-![SNN architecture](SNN_architecture.jpg)
+
 
 When training a network, data is received sequentially one at a time. After the generation of spikes evoked by a single image for _350 msec_, there is a rest period of _150 msec_ in the absence of input signals. During the resting period, the potential of the excitatory neurons drops to a lower threshold, after which the loop is repeated in the subsequent image.
 ***
